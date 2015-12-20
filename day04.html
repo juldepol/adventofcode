@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+    <title>TASK 4</title>
+  </head>
+  <body></body>
+  <script>
+    var start = new Date().getTime();
+    var key = "ckczppom";
+    var add = 0;
+    var find = false;
+    while (find !== true) {
+      var hash = CryptoJS.MD5(key + add).toString().split("");
+      if (hash[0] == 0 && hash[1] == 0 && hash[2] == 0 && hash[3] == 0 && hash[4] == 0 && hash[5] == 0) {
+        find = true;
+      } else {
+        add++;
+      }
+    }
+    var end = new Date().getTime();
+    console.log(add);
+
+    var time = end - start;
+
+    alert('Execution time: ' + (time / 1000).toFixed(2) + "sec, or " + (time / 60000).toFixed(2) + "min\n Number of checked hashes: "+add);
+    console.log('Execution time: ' + time + " ms (or " + (time / 1000).toFixed(2) + "sec, or " + (time / 60000).toFixed(2) + "min)");
+  </script>
+</html>
