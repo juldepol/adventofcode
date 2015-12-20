@@ -1,5 +1,5 @@
 var fs = require("fs");
-var db = fs.readFileSync("task_06DB.txt", "utf-8");
+var db = fs.readFileSync("day06DB.txt", "utf-8");
 var col, From, To;
 var row = db.split("\n");
 var size=1000;

@@ -1,5 +1,5 @@
 var fs = require("fs");
-var db = fs.readFileSync("task_14DB.txt", "utf-8");
+var db = fs.readFileSync("day14DB.txt", "utf-8");
 var row = db.split("\n");
 
 var TIME = 2503;

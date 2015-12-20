@@ -1,5 +1,5 @@
 var fs = require("fs");
-var db = fs.readFileSync("task_08DB.txt", "utf-8");
+var db = fs.readFileSync("day08DB.txt", "utf-8");
 var row = db.split("\r\n");
 
 var sum1=0;
